@@ -85,6 +85,8 @@ const Griffin = new ProjectManager ({
 });
 
 Keiran.speak();
+Heather.speak();
+Griffin.speak();
 Keiran.demo('JavaScript');
 Keiran.grade(Heather, 'science');
 Heather.listSubjects();
