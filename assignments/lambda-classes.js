@@ -18,8 +18,11 @@ class Instructors extends Person {
         this.favLanguage = instructorInfo.favLanguage;
         this.catchPhrase = instructorInfo.catchPhrase;
     }
-    speak() {
-        console.log(`Hello my specialty is ${this.specialty} and my catch phrase is ${this.catchPhrase}`)
+    demo(subject) {
+       console.log(`Today we are learning about ${subject}`);
+    }
+    grade(student, subject) {
+        console.log(`${student.name} receives a perfect score on ${subject}`);
     }
 }
 
@@ -30,7 +33,15 @@ class Student extends Person {
         this.className = studentInfo.className;
         this.favSubjects = studentInfo.favSubjects;
     }
-    
+    listSubjects() {
+        console.log(`${this.favSubjects}`)
+    }
+    PRAssignment(subject) {
+        console.log(`${student.name} has submitted a PR for ${subject}`);
+    }
+    sprintChallenge(subject) {
+        console.log(`${student.name} has begun sprint challenge on ${subject}`);
+    }
 }
 
 class ProjectManager extends Instructors {
@@ -39,17 +50,17 @@ class ProjectManager extends Instructors {
         this.gradClassName = projectManagerInfo.gradClassName;
         this.favInstructor = projectManagerInfo.favInstructor;
     }
-    standup() {
+    standup(channel) {
         console.log(`${this.name} announces to ${channel}, @channel standy times!`)
     }
-    debugsCode() {
+    debugsCode(student, subject) {
         console.log(`${this.name} debugs ${student.name}'s code on ${subject}.`)
     }
 }
 
 const Keiran = new Instructors ({
     name: 'Keiran',
-    location: 'Los Vegas',
+    location: 'Las Vegas',
     age: 26,
     favLanguage: 'JavaScript',
     specialty: 'Front-End',
@@ -72,3 +83,10 @@ const Griffin = new ProjectManager ({
     gradClassName: 'webpt2',
     favInstructor: 'Josh Knell',
 });
+
+Keiran.speak();
+Keiran.demo('JavaScript');
+Keiran.grade(Heather, 'science');
+Heather.listSubjects();
+Griffin.standup('webpt2')
+Griffin.debugsCode(Heather, 'math');
