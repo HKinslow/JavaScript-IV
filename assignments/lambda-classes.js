@@ -37,10 +37,10 @@ class Student extends Person {
         console.log(`${this.favSubjects}`)
     }
     PRAssignment(subject) {
-        console.log(`${student.name} has submitted a PR for ${subject}`);
+        console.log(`${this.name} has submitted a PR for ${subject}`);
     }
     sprintChallenge(subject) {
-        console.log(`${student.name} has begun sprint challenge on ${subject}`);
+        console.log(`${this.name} has begun sprint challenge on ${subject}`);
     }
 }
 
@@ -51,7 +51,7 @@ class ProjectManager extends Instructors {
         this.favInstructor = projectManagerInfo.favInstructor;
     }
     standup(channel) {
-        console.log(`${this.name} announces to ${channel}, @channel standy times!`)
+        console.log(`${this.name} announces to ${this.gradClassName}, @channel standy times!`)
     }
     debugsCode(student, subject) {
         console.log(`${this.name} debugs ${student.name}'s code on ${subject}.`)
@@ -88,5 +88,7 @@ Keiran.speak();
 Keiran.demo('JavaScript');
 Keiran.grade(Heather, 'science');
 Heather.listSubjects();
-Griffin.standup('webpt2')
-Griffin.debugsCode(Heather, 'math');
+Heather.PRAssignment('CSS');
+Heather.sprintChallenge('JavaScript');
+Griffin.standup('gradClassName');
+Griffin.debugsCode(Heather, 'JavaScript');
