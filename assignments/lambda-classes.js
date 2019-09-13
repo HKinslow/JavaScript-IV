@@ -88,7 +88,7 @@ Keiran.speak();
 Heather.speak();
 Griffin.speak();
 Keiran.demo('JavaScript');
-Keiran.grade(Heather, 'science');
+Keiran.grade(Heather, 'HTML');
 Heather.listSubjects();
 Heather.PRAssignment('CSS');
 Heather.sprintChallenge('JavaScript');
